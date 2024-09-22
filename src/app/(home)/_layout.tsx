@@ -1,7 +1,7 @@
 import { Tabs } from "expo-router";
 import Entypo from "@expo/vector-icons/Entypo";
 import FontAwesome5 from "@expo/vector-icons/FontAwesome5";
-import { theme } from "../../theme/them";
+import { theme } from "@/src/theme/them";
 
 
 export default function HomeLayout(){
@@ -11,12 +11,13 @@ export default function HomeLayout(){
           tabBarActiveTintColor: theme.colorPrimary,
         }}>
         <Tabs.Screen
-          name="index"
+          name="(product)"
           options={{
+            headerShown: false,
             tabBarIcon: ({ color }) => (
               <Entypo name="home" size={24} color={color} />
             ),
-            headerShown: false,
+            title: "Home",
           }}
         />
         <Tabs.Screen
