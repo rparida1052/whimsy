@@ -1,5 +1,6 @@
 export const theme = {
-  colorPrimary: "#DB3022",
+  colorPrimary: "#6055D8",
   colorSecondary: "#FFFFFF",
-  bgColor: "#f9f9f9",
+  colorGray: "#f9f9f9",
+
 };

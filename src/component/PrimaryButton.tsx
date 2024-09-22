@@ -7,11 +7,11 @@ interface PrimaryButtonProps {
   title: string;
   bgColor?: string;
   color?: string;
-
+  containerStyle?: object;
 }
-const PrimaryButton = ({bgColor,color,onPress,title}:PrimaryButtonProps) => {
+const PrimaryButton = ({bgColor,color,onPress,title,containerStyle}:PrimaryButtonProps) => {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container,containerStyle]}>
       <Text style={styles.btnText}>{title}</Text>
     </View>
   )

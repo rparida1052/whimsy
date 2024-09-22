@@ -6,23 +6,28 @@ interface TextInputProps {
     placeholder?: string;
     value?: string;
     onChangeText?: (text:string) => void;
+    containerStyle?: object;
+    icon?: React.ReactNode;
 }
-const InputText = () => {
+const InputText = ({placeholder,value,onChangeText,containerStyle,icon}:TextInputProps) => {
 
   return (
-   <View style={styles.container}>
-    <TextInput placeholder='Enter ' style={styles.inputText}/>
-   </View>
-  )
+    <View style={[styles.container, containerStyle]}>
+      {icon}
+      <TextInput placeholder={placeholder} style={styles.inputText} value={value} onChangeText={onChangeText}/>
+    </View>
+  );
 }
 
 export default InputText
 
 const styles = StyleSheet.create({
   container: {
-    width: 343,
+    flexDirection: "row",
+    alignItems:"center",
+    gap:10,
+    width: "100%",
     height: 64,
-    marginHorizontal: 20,
     backgroundColor: theme.colorSecondary,
     padding: 10,
     borderRadius: 6,
